@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import Fade from 'react-reveal/Fade'
+
 
 const Login = (props) => {
 
@@ -44,49 +46,51 @@ const Login = (props) => {
   console.log(errors)
 
   return <div className="background-image-login">
-    
-    <div className="container container-custom">
 
-    <form onSubmit={handleSubmit}>
+    <Fade>
+      <div className="container container-custom">
 
-      <div className="form-group">
+        <form onSubmit={handleSubmit}>
 
-        <input
-          className="form-control"
-          placeholder="Email"
-          type="email"
-          onChange={handleChange}
-          value={formData.email}
-          name="email"
-          required
-        />
+          <div className="form-group">
+
+            <input
+              className="form-control"
+              placeholder="Email"
+              type="email"
+              onChange={handleChange}
+              value={formData.email}
+              name="email"
+              required
+            />
+
+          </div>
+
+          <div className="form-group">
+
+            <input
+              className="form-control"
+              placeholder="Password"
+              type="password"
+              onChange={handleChange}
+              value={formData.password}
+              name="password"
+              required
+            />
+
+          </div>
+
+          {errors.message && <p id="error" style={{ color: 'red' }}>
+            {errors.message}
+          </p>}
+
+          <button className="btn btn-dark">Login</button>
+
+        </form>
 
       </div>
-
-      <div className="form-group">
-
-        <input
-          className="form-control"
-          placeholder="Password"
-          type="password"
-          onChange={handleChange}
-          value={formData.password}
-          name="password"
-          required
-        />
-
-      </div>
-
-      {errors.message && <p id="error" style={{ color: 'red' }}>
-        {errors.message}
-      </p>}
-
-      <button className="btn btn-dark">Login</button>
-
-    </form>
-
+    </Fade>
   </div>
-    </div>
 
 }
 

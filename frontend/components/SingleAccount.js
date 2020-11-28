@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Fade from 'react-reveal/Fade'
+
 
 const SingleAccount = (props) => {
 
   const [formData, updateFormData] = useState({})
   const [accountData, updateAccountData] = useState({})
-  const [text, updateText] = useState('')
-  const token = localStorage.getItem('token')
   const [favourites, updateFavourites] = useState([])
 
   useEffect(() => {
@@ -24,56 +24,60 @@ const SingleAccount = (props) => {
   console.log(props)
   console.log(favourites)
 
-  return <div className="background-image-single-account"> <div className="container container-account single-account">
-    <div className="card card-transparent" id="wide-card">
-      <div className="text-light card-header bg-dark">
-        About me
-      </div>
-      <ul className="list-group list-group-flush card-transparent">
-        <li className="list-group-item card-transparent">Ski or Board:  {formData.ski_or_board}</li>
-        <li className="list-group-item card-transparent">Favourite region: {formData.favourite_region}</li>
-        <li className="list-group-item card-transparent">Hometown:  {formData.hometown}</li>
-        <li className="list-group-item card-transparent">Experience level:  {formData.experience}</li>
-        <li className="list-group-item card-transparent">Favorutie brand:  {formData.favourite_brand}</li>
-        <Link to={`/users/aboutme/${props.match.params.id}`}><li className="list-group-item text-danger card-transparent">Edit About me {pencilIcon}</li></Link>
-      </ul>
-    </div>
-
-    <div className="card-group">
-      <div className="card card-transparent" key="index" id="a-card">
-        <img className="card-img-top" src={formData.image} alt="Card image cap"></img>
-        <div className="card-body card-transparent">
-          <h5 className="card-title">{formData.username}</h5>
-          <Link to={`/users/edit/${props.match.params.id}`} className="btn btn-dark btn-resort">Update your account</Link>
+  return <div className="background-image-single-account">
+    <Fade>
+      <div className="container container-account single-account">
+        <div className="card card-transparent" id="wide-card">
+          <div className="text-light card-header bg-dark">
+            About me
         </div>
+          <ul className="list-group list-group-flush card-transparent">
+            <li className="list-group-item card-transparent">Ski or Board:  {formData.ski_or_board}</li>
+            <li className="list-group-item card-transparent">Favourite region: {formData.favourite_region}</li>
+            <li className="list-group-item card-transparent">Hometown:  {formData.hometown}</li>
+            <li className="list-group-item card-transparent">Experience level:  {formData.experience}</li>
+            <li className="list-group-item card-transparent">Favorutie brand:  {formData.favourite_brand}</li>
+            <Link to={`/users/aboutme/${props.match.params.id}`}><li className="list-group-item text-danger card-transparent">Edit About me {pencilIcon}</li></Link>
+          </ul>
+        </div>
+
+        <div className="card-group">
+          <div className="card card-transparent" key="index" id="a-card">
+            <img className="card-img-top" src={formData.image} alt="Card image cap"></img>
+            <div className="card-body card-transparent">
+              <h5 className="card-title">{formData.username}</h5>
+              <Link to={`/users/edit/${props.match.params.id}`} className="btn btn-dark btn-resort">Update your account</Link>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="card card-transparent" id="wide-card">
+          <div className="text-light card-header bg-dark card-transparent">
+            My favourites
       </div>
-    </div>
+          <div className="card-body card-transparent">
 
+            {formData && favourites.map((property, index) => {
 
-    <div className="card card-transparent" id="wide-card">
-      <div className="text-light card-header bg-dark card-transparent">
-        My favourites
-      </div>
-      <div className="card-body card-transparent">
+              return <div key={index}>
 
-        {formData && favourites.map((property, index) => {
+                <Link to={`/resorts/${property}`}>{property}</Link>
 
-          return <div key={index}>
+              </div>
 
-            <Link to={`/resorts/${property}`}>{property}</Link>
-
+            })}
           </div>
 
-        })}
+
+
+        </div>
       </div>
-
-
-
-    </div>
+    </Fade>
   </div>
-  </div>
-}
 
+}  
+ 
 export default SingleAccount
 
 const pencilIcon = <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-pencil-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

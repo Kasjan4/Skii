@@ -8,6 +8,13 @@ body {
   background-color: black;
 }
 
+.btn-dark {
+  opacity: 0.7;
+  margin-left: .2rem;
+  margin-right: .2rem;
+}
+
+
 .container-custom {
   height: 100vh;
   align-items: center;
@@ -25,34 +32,12 @@ body {
   flex-direction: column;
 }
 
-.background-image-login {
-  background-image: url('https://i.imgur.com/EonHcnD.jpg');
-  background-size: cover;
-}
-.background-image-joinus {
-  background-image: url('https://i.imgur.com/zqD1UIV.jpg');
-  background-size: cover;
-}
-.background-image-single-resort {
-  background-image: url('https://i.imgur.com/cUkydzz.jpg');
+.background-image-login, .background-image-joinus, .background-image-single-resort, .background-image-single-account {
+  background-image: url('https://i.imgur.com/XjXqzAY.png');
   background-size: cover;
   height: 100vh;
 }
-.background-image-single-account {
-  background-image: url('https://i.imgur.com/Vvbw7gK.jpg');
-  background-size: cover;
-  height: 100vh;
-}
-.background-image-resorts {
-  background-color: rgb(252, 252, 252);
-  /* background-size: cover; */
-  margin: 0;
-  padding: 0;
-  
-}
-.single-account {
-  /* opacity: 0.8; */
-}
+
 .container-resorts {
   /* height: 100vh; */
   top: 7rem;
@@ -65,7 +50,7 @@ body {
   padding-top: 10px;
   position: relative;
   top: 7rem;
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(255, 255, 255);
 }
 
 .container-account {
@@ -131,9 +116,14 @@ form {
 }
 
 form input {
+  color: white!important;
   border-radius: 0 !important;
-  background-color: rgb(255, 255, 255, 0.5)!important;
-  border: 0!important;
+  background-color: rgb(255, 255, 255, 0.2)!important;
+  border: 1px solid white;
+}
+
+form ::placeholder {
+  color: rgb(0, 0, 0, 0.5)!important;
 }
 
 
@@ -257,12 +247,11 @@ form input {
 
 .card-single {
   display: flex!important;
-  /* position: ; */
   flex-direction: row !important;
   width: 50rem;
   top: 7rem;
   height: inherit;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .card-img-top-single {
@@ -277,7 +266,7 @@ form input {
 }
 
 .resort-single-info p {
-  font-size: .8rem;
+  font-size: .7rem;
 }
 
 .resort-info-upper {
@@ -395,7 +384,7 @@ textarea:focus,
   font-size: .8rem !important;
 }
 
-.button {
+.home-button {
   margin: 2px;
   opacity: 0.5;
   /* text-emphasis-style: ; */

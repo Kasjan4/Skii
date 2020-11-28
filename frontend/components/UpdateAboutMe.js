@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import Fade from 'react-reveal/Fade'
+
 
 const UpdateAboutMe = (props) => {
 
@@ -49,81 +50,84 @@ const UpdateAboutMe = (props) => {
 
   console.log(accountData)
 
-  return <div className="container container-custom">
+  return <div className="background-image-single-account">
+    <Fade>
+      <div className="container container-custom">
 
-    <form onSubmit={handleUpdate}>
+        <form onSubmit={handleUpdate}>
 
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="Ski or Board"
-          type="text"
-          onChange={handleChange}
-          value={accountData.ski_or_board}
-          name="ski_or_board"
-        />
-      </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Ski or Board"
+              type="text"
+              onChange={handleChange}
+              value={accountData.ski_or_board}
+              name="ski_or_board"
+            />
+          </div>
 
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="My favourite region"
-          type="text"
-          onChange={handleChange}
-          value={accountData.favourite_region}
-          name="favourite_region"
-        />
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="My favourite region"
+              type="text"
+              onChange={handleChange}
+              value={accountData.favourite_region}
+              name="favourite_region"
+            />
 
-      </div>
+          </div>
 
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="My hometown is"
-          type="Text"
-          onChange={handleChange}
-          value={accountData.hometown}
-          name="hometown"
-        />
-      </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="My hometown is"
+              type="Text"
+              onChange={handleChange}
+              value={accountData.hometown}
+              name="hometown"
+            />
+          </div>
 
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="I have 'x' years experience"
-          type="text"
-          onChange={handleChange}
-          value={accountData.experience}
-          name="experience"
-        />
-      </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="I have 'x' years experience"
+              type="text"
+              onChange={handleChange}
+              value={accountData.experience}
+              name="experience"
+            />
+          </div>
 
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="My favourite ski brand is"
-          type="text"
-          onChange={handleChange}
-          value={accountData.favourite_brand}
-          name="favourite_brand"
-        />
-      </div>
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="My favourite ski brand is"
+              type="text"
+              onChange={handleChange}
+              value={accountData.favourite_brand}
+              name="favourite_brand"
+            />
+          </div>
 
-      <div className="form-group">
-        <button className="btn btn-primary">Submit Changes</button>
-      </div>
-    </form>
+          <div className="form-group">
+            <button className="btn btn-primary">Submit Changes</button>
+          </div>
+        </form>
 
-    <div className="form-group">
-      <button
-        onClick={handleBack}
-        className="btn btn-danger">
-        {backArrowIcon} Discard changes
+        <div className="form-group">
+          <button
+            onClick={handleBack}
+            className="btn btn-danger">
+            {backArrowIcon} Discard changes
       </button>
-    </div>
+        </div>
 
+      </div>
+    </Fade>
   </div>
-
 }
 
 export default UpdateAboutMe

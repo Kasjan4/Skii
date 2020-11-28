@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-//hmmm
+import Fade from 'react-reveal/Fade'
+
+
 const UpdateAccount = (props) => {
 
   const token = localStorage.getItem('token')
@@ -93,94 +95,97 @@ const UpdateAccount = (props) => {
 
   console.log(formData)
 
-  return <div className="container container-custom">
+  return <div className="background-image-single-account">
+    <Fade>
+      <div className="container container-custom">
 
-    <form onSubmit={handleUpdate}>
+        <form onSubmit={handleUpdate}>
 
-      <div className="form-group">
-        <img src={formData.image} />
-        <button
-          type="image"
-          value={formData.image}
-          onClick={handleImageUpload}
-          name="image"
-        >Upload Image
+          <div className="form-group">
+            <img src={formData.image} />
+            <button
+              type="image"
+              value={formData.image}
+              onClick={handleImageUpload}
+              name="image"
+            >Upload Image
         </button>
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Username"
+              type="text"
+              onChange={handleChange}
+              value={formData.username}
+              name="username"
+            />
+            {errors.username && <p id="error" style={{ color: 'red' }}>
+              {`There was a problem with your ${errors.username.path}`}
+            </p>}
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Email"
+              type="text"
+              onChange={handleChange}
+              value={formData.email}
+              name="email"
+            />
+            {errors.email && <p id="error" style={{ color: 'red' }}>
+              {`There was a problem with your ${errors.email.path}`}
+            </p>}
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Password"
+              type="Password"
+              onChange={handleChange}
+              value={formData.password}
+              name="password"
+            />
+            {errors.password && <p id="error" style={{ color: 'red' }}>
+              {`There was a problem with your ${errors.password.path}`}
+            </p>}
+          </div>
+
+          <div className="form-group">
+            <input
+              className="form-control"
+              placeholder="Confirm Password"
+              type="password"
+              onChange={handleChange}
+              value={formData.passwordConfirmation}
+              name="passwordConfirmation"
+            />
+            {errors.passwordConfirmation && <p id="error" style={{ color: 'red' }}>
+              {'Does not match password'}
+            </p>}
+          </div>
+
+          <div className="form-group">
+            <button className="btn btn-primary">Submit Changes</button>
+          </div>
+        </form>
+
+        <div className="form-group">
+          <Link to="#" className="">
+            <button
+              className="btn btn-danger"
+              onClick={handleDelete}>
+              Delete Acount {deleteIcon}
+            </button>
+          </Link>
+        </div>
+
       </div>
-
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="Username"
-          type="text"
-          onChange={handleChange}
-          value={formData.username}
-          name="username"
-        />
-        {errors.username && <p id="error" style={{ color: 'red' }}>
-          {`There was a problem with your ${errors.username.path}`}
-        </p>}
-      </div>
-
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="Email"
-          type="text"
-          onChange={handleChange}
-          value={formData.email}
-          name="email"
-        />
-        {errors.email && <p id="error" style={{ color: 'red' }}>
-          {`There was a problem with your ${errors.email.path}`}
-        </p>}
-      </div>
-
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="Password"
-          type="Password"
-          onChange={handleChange}
-          value={formData.password}
-          name="password"
-        />
-        {errors.password && <p id="error" style={{ color: 'red' }}>
-          {`There was a problem with your ${errors.password.path}`}
-        </p>}
-      </div>
-
-      <div className="form-group">
-        <input
-          className="form-control"
-          placeholder="Confirm Password"
-          type="password"
-          onChange={handleChange}
-          value={formData.passwordConfirmation}
-          name="passwordConfirmation"
-        />
-        {errors.passwordConfirmation && <p id="error" style={{ color: 'red' }}>
-          {'Does not match password'}
-        </p>}
-      </div>
-
-      <div className="form-group">
-        <button className="btn btn-primary">Submit Changes</button>
-      </div>
-    </form>
-
-    <div className="form-group">
-      <Link to="#" className="">
-        <button
-          className="btn btn-danger"
-          onClick={handleDelete}>
-          Delete Acount {deleteIcon}
-        </button>
-      </Link>
-    </div>
-
+    </Fade>
   </div>
-
 }
 
 export default UpdateAccount

@@ -19,11 +19,6 @@ const SingleAccount = (props) => {
       })
   }, [])
 
-  console.log(accountData)
-  console.log(formData)
-  console.log(props)
-  console.log(favourites)
-
   return <div className="background-image-single-account">
     <Fade>
       <div className="container container-account single-account">

@@ -19,7 +19,6 @@ const schema = new mongoose.Schema({
   hometown: { type: String },
   experience: { type: String },
   favourite_brand: { type: String }
-  
 })
 
 schema.plugin(mongooseHidden({ defaultHidden: { password: true, email: true } }))

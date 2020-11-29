@@ -14,12 +14,11 @@ function getUsers(req, res) {
 
 function createUser(req, res) {
   const body = req.body
-  console.log(body)
+
   User
     .create(body)
     .then(user => {
-      console.log(user)
-      console.log('here')
+
       res.send(user)
     })
     .catch(error => res.send(error))

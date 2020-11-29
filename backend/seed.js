@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Resorts = require('./models/resorts')
 const User = require('./models/users')
 const { dbURI } = require('./config/environment')
-const axios = require('axios')
+
 
 mongoose.connect(
   dbURI,
@@ -11,8 +11,8 @@ mongoose.connect(
   (err) => {
 
     if (err) return console.log(err)
-
     console.log('Mongoose connected!')
+
     mongoose.connection.db.dropDatabase()
 
       .then(() => {
@@ -109,7 +109,7 @@ mongoose.connect(
         console.log(`${users.length} users have been created`)
         return users
       })
-      //hmm
+
       .then((users) => {
         return Resorts.create([
 

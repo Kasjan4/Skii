@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
 /* UNIVERSAL */
 
 body {
@@ -169,6 +171,18 @@ form ::placeholder {
   position: relative;
   top: 100px;
   left: 100px;
+}
+
+.home-title {
+  color: white;
+  font-size: 2.3rem;
+  margin-left:1rem;
+  font-family: 'Faster One', cursive;
+  margin-bottom: 0;
+}
+
+.ski-icon {
+  color: rgb(255, 255, 255, 0.9);
 }
 
 /* ACCOUNT PAGE */

@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSkiing } from '@fortawesome/free-solid-svg-icons'
+
 
 const NavBar = (props) => {
+
+  const ski = <FontAwesomeIcon icon={faSkiing} size="2x" />
 
   const token = localStorage.getItem('token')
   if (token) {
@@ -18,7 +23,8 @@ const NavBar = (props) => {
 
   return <nav className="navbar navbar-expand-md navbar-dark nav-background fixed-top">
 
-    <Link to="/" className="navbar-brand nav-brand">Ski Resorts</Link>
+    <div className="ski-icon" >{ski}</div>
+    <h1 className="home-title" >Skii</h1>
 
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
       <span className="navbar-toggler-icon"></span>

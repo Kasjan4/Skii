@@ -2,7 +2,7 @@
 
 ## Overview
 
-My third project of the Software Engeneering Immersive course in General Assembly. Within a group of four we built a full stack website, using React, Express, MongoDB and Node. Using GitHub and Git to collaborate, we were learning the process of deploying a full stack website. 
+My third project of the Software Engeneering Immersive bootcamp at General Assembly. Within a group of four we built a full stack website, using React, Express, MongoDB and Node. Using GitHub and Git to collaborate, we were learning the process of deploying a full stack website. 
 
 [CHECK IT OUT HERE](https://skiresorts.herokuapp.com/)
 

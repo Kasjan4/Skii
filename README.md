@@ -128,12 +128,12 @@ The singular resort page gives all the information about a given resort.
 
 A middleware was working as a secure route to determine who the active user was and his/her permissions. It is used in the following scenarios:
 
-- Editing a profile
-- Removing a profile
-- Creating a comment
-- Deleting a comment
-- Adding a resort to favourites
-- Removing a resort from favourites
+- Editing a profile.
+- Removing a profile.
+- Creating a comment.
+- Deleting a comment.
+- Adding a resort to favourites.
+- Removing a resort from favourites.
 
 - Checking for a token:
 
@@ -202,7 +202,7 @@ The ability to edit personal information, avatar and check out added favourites 
 ![Ski Resorts](./screenshots/account.png)
 
 
-- Here is axios fetching our current user, to retrieve their information
+- Here is axios fetching our current user, to retrieve their information.
 
 ```js
   useEffect(() => {
@@ -242,7 +242,7 @@ The ability to edit personal information, avatar and check out added favourites 
             })}
 ```
 
-- A cloudinary widget implemented to allow the user to upload an avatar in the update account option
+- A cloudinary widget implemented to allow the user to upload an avatar in the update account option.
 
 ```js
     window.cloudinary.createUploadWidget(
@@ -337,7 +337,7 @@ mongoose.connect(
 ## Bugs (Fixed)
 
 - Fixed bootstrap card scaling when variable resort information length is given.
-- Fixed image upload from cloudinary
+- Fixed image upload from cloudinary.
 
  
 
@@ -351,12 +351,12 @@ mongoose.connect(
 
 Background
 
-- pixabay.com, open source license
-- imgur.com, for personal hosting
+- pixabay.com, open source license.
+- imgur.com, for personal hosting.
 
 Icons
 
-- Font Awesome
+- Font Awesome.
 
 ## Contributors
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-My third project of the Software Engeneering Immersive course in General Assembly. Within a group of four we built a full stack website, using React, Express, MongoDB and Node. Using GitHub and Git to collaborate, we were learning the process of deploying a full stack website. 
+My third project of the Software Engineering Immersive course in General Assembly. Within a group of four we built a full stack website, using React, Express, MongoDB and Node. Using GitHub and Git to collaborate, we were learning the process of deploying a full stack website. 
 
 [CHECK IT OUT HERE](https://skiresorts.herokuapp.com/)
 
@@ -37,7 +37,7 @@ My third project of the Software Engeneering Immersive course in General Assembl
 - React Hooks
 - Font Awesome
 - React Reveal
-- External weather API
+- Weather API: api.openweathermap.org
 
 ## Approach
 
@@ -47,14 +47,14 @@ I was responsible for the front end user interface, the resorts page in the shap
 
 For our React frontend, we implemented bootstrap as our css framework, giving us good efficiency when creating the interface.
 
-## The resorts
+## The Resorts
 
 After searching many ski API's, we couldn't find one to suit our needs and decided to create our own database with ski resort data taken from the web. The updating weather conditions are taken from an external open source weather API.
 
 
 ## Home Page
 
-Using MapBox, the ski resorts from our API were seeded and displayed here as markers. Longtitude and lattitude are useful here as well as in the external weather API. The user can toggle different regions of the world with a simple nav bar.
+Using MapBox, the ski resorts from our API were seeded and displayed here as markers. Longitude and latitude are useful here as well as in the external weather API. The user can toggle different regions of the world with a simple nav bar.
 
 ![Ski Resorts](./screenshots/home.png)
 
@@ -195,9 +195,9 @@ const schema = new mongoose.Schema({
 })
 ```
 
-## My account
+## My Account
 
-The ability to edit personal infromation, avatar and check out added favourites was implemented.
+The ability to edit personal information, avatar and check out added favourites was implemented.
 
 ![Ski Resorts](./screenshots/account.png)
 
@@ -242,7 +242,7 @@ The ability to edit personal infromation, avatar and check out added favourites 
             })}
 ```
 
-- A cloudinary widget implemented to allow the user to upload an avatar in the update acccount option
+- A cloudinary widget implemented to allow the user to upload an avatar in the update account option
 
 ```js
     window.cloudinary.createUploadWidget(
@@ -323,6 +323,15 @@ mongoose.connect(
             numOfRatings: 0
           },
 ```
+## Wins
+
+- Gained a good understanding of a MERN stack. Learned how to display data from both our database and use fetch calls for external data.
+
+- Collaborated within a team to produce a descent design for the site.
+
+## Challenges
+
+- Learning to manage some conflicts in our git repos. They key was communication which was improved greatly.
 
 
 ## Bugs (Fixed)
@@ -342,8 +351,8 @@ mongoose.connect(
 
 Background
 
-- pixabay.com
-- imgur.com
+- pixabay.com, open source license
+- imgur.com, for personal hosting
 
 Icons
 

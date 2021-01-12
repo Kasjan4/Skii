@@ -1,4 +1,4 @@
-# Ski Resorts
+# Skii
 
 ## Overview
 
@@ -42,6 +42,8 @@ My third project of the Software Engeneering Immersive bootcamp at General Assem
 ## Approach
 
 We decided to construct a ski resorts website where the resorts were displayed using React native maps, and the user could check out information on each resort and interact with it such as add a star rating, post comments and add a resort to their favourites. Current weather conditions must be shown for each resort. An account section would let the user change the personal information and upload an avatar.
+
+We first planned out our design using wireframes and mapped out how our data was to be stored in our NoSQL database, taking into account the neccessary models. 
 
 I was responsible for the front end user interface, the resorts page in the shape of cards, login and sign up page, singular resort page as well as all the backend endpoints and logic that match. However we worked together on many aspects of the project, growing our knowledge by sharing previous experience in different technologies.
 

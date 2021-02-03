@@ -2,9 +2,11 @@
 
 ## Overview
 
-My third project of the Software Engeneering Immersive bootcamp at General Assembly. Within a group of four we built a full stack website, using React, Express, MongoDB and Node. Using GitHub and Git to collaborate, we were learning the process of deploying a full stack website. 
+My third project of the Software Engineering Immersive bootcamp at General Assembly. Within a group of four we built a full stack website, using React, Express, MongoDB and Node. Using GitHub and Git to collaborate, we were learning the process of deploying a full stack website. 
 
 [CHECK IT OUT HERE](https://skiresorts.herokuapp.com/)
+
+![Skii](./screenshots/home.png)
 
 ## Brief
 
@@ -43,7 +45,7 @@ My third project of the Software Engeneering Immersive bootcamp at General Assem
 
 We decided to construct a ski resorts website where the resorts were displayed using React native maps, and the user could check out information on each resort and interact with it such as add a star rating, post comments and add a resort to their favourites. Current weather conditions must be shown for each resort. An account section would let the user change the personal information and upload an avatar.
 
-We first planned out our design using wireframes and mapped out how our data was to be stored in our NoSQL database, taking into account the neccessary models. 
+We first planned out our design using wireframes and mapped out how our data was to be stored in our NoSQL database, taking into account the necessary models. 
 
 I was responsible for the front end user interface, the resorts page in the shape of cards, login and sign up page, singular resort page as well as all the backend endpoints and logic that match. However we worked together on many aspects of the project, growing our knowledge by sharing previous experience in different technologies.
 
@@ -58,7 +60,7 @@ After searching many ski API's, we couldn't find one to suit our needs and decid
 
 Using MapBox, the ski resorts from our API were seeded and displayed here as markers. Longitude and latitude are useful here as well as in the external weather API. The user can toggle different regions of the world with a simple nav bar.
 
-![Ski Resorts](./screenshots/home.png)
+![Skii](./screenshots/home.png)
 
 - A function toggling North America
 
@@ -94,7 +96,7 @@ Using MapBox, the ski resorts from our API were seeded and displayed here as mar
 
 The singular resort page gives all the information about a given resort.
 
-![Ski Resorts](./screenshots/resorts.png)
+![Skii](./screenshots/resorts.png)
 
 
 - Here the external weather API is used to .map the next 7 days of weather.
@@ -201,7 +203,7 @@ const schema = new mongoose.Schema({
 
 The ability to edit personal information, avatar and check out added favourites was implemented.
 
-![Ski Resorts](./screenshots/account.png)
+![Skii](./screenshots/account.png)
 
 
 - Here is axios fetching our current user, to retrieve their information.

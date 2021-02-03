@@ -40,7 +40,8 @@ module.exports = env => {
       new HtmlWebpackPlugin({
         template: 'frontend/index.html',
         filename: 'index.html',
-        inject: 'body'
+        inject: 'body',
+        favicon: './frontend/img/favicon.ico'
       })
     ]
   }

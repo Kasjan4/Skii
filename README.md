@@ -362,11 +362,5 @@ Icons
 
 - Font Awesome.
 
-## Contributors
-
-- Kasjan Hinc
-- Daniel Tockan
-- Sean Fenelon
-- Omar Alawi
 
 
